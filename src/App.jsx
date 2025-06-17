@@ -1,8 +1,21 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./page/Login";
+import Home from "./Page/Home";
+import Reset from "./page/Reset";
+import Register from "./page/Register";
+
 function App() {
   return (
-    <>
-      <h1 className="text-center text-2xl mt-6">Vite/React Tailwind Starter</h1>
-    </>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/reset" element={<Reset />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
